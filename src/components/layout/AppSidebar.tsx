@@ -52,7 +52,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
   activeItem,
   onSelectItem
 }) => {
-  const theme = useTheme();
+  const theme = useTheme<any>();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const isDark = theme.palette.mode === 'dark';
 

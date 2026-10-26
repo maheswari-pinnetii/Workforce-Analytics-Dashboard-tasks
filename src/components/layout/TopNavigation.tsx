@@ -146,7 +146,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
             size="small"
             fullWidth
             value={searchQuery}
-            onChange={(e) => onSearchChange(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => onSearchChange(e.target.value)}
             slotProps={{
               input: {
                 startAdornment: (
@@ -154,7 +154,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
                     <Search size={16} color={theme.palette.text.secondary} />
                   </InputAdornment>
                 )
-              }
+              } as any
             }}
             sx={{
               '& .MuiOutlinedInput-root': {

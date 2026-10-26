@@ -93,12 +93,13 @@ export const DashboardFilters: React.FC<DashboardFiltersProps> = ({
         </Box>
 
         {/* Department Filter */}
+        {/* Department Filter */}
         <TextField
           select
           size="small"
           label="Department"
           value={filters.department}
-          onChange={(e) => onFilterChange({ department: e.target.value })}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => onFilterChange({ department: e.target.value })}
           sx={{ minWidth: 150 }}
           slotProps={{
             input: {
@@ -107,7 +108,7 @@ export const DashboardFilters: React.FC<DashboardFiltersProps> = ({
                   <Building2 size={15} color={theme.palette.text.secondary} />
                 </InputAdornment>
               )
-            }
+            } as any
           }}
         >
           {DEPARTMENTS.map((dept) => (
@@ -123,7 +124,7 @@ export const DashboardFilters: React.FC<DashboardFiltersProps> = ({
           size="small"
           label="Location"
           value={filters.location}
-          onChange={(e) => onFilterChange({ location: e.target.value })}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => onFilterChange({ location: e.target.value })}
           sx={{ minWidth: 150 }}
           slotProps={{
             input: {
@@ -132,7 +133,7 @@ export const DashboardFilters: React.FC<DashboardFiltersProps> = ({
                   <MapPin size={15} color={theme.palette.text.secondary} />
                 </InputAdornment>
               )
-            }
+            } as any
           }}
         >
           {LOCATIONS.map((loc) => (
@@ -148,7 +149,7 @@ export const DashboardFilters: React.FC<DashboardFiltersProps> = ({
           size="small"
           label="Status"
           value={filters.status}
-          onChange={(e) => onFilterChange({ status: e.target.value })}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => onFilterChange({ status: e.target.value })}
           sx={{ minWidth: 140 }}
           slotProps={{
             input: {
@@ -157,7 +158,7 @@ export const DashboardFilters: React.FC<DashboardFiltersProps> = ({
                   <CheckCircle2 size={15} color={theme.palette.text.secondary} />
                 </InputAdornment>
               )
-            }
+            } as any
           }}
         >
           {STATUSES.map((st) => (
